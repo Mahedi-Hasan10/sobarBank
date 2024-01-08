@@ -1,14 +1,15 @@
 'use client';
 import { useState } from 'react';
-import MenuOutlined from '@ant-design/icons/MenuOutlined';
+import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import Image from 'next/image';
 const Navbar = () => {
     const [show, setShow] = useState(false);
-    const openMenu = () => {
-        setShow(show => !show);
-        console.log(show)
-    }
+    // const openMenu = () => {
+    //     console.log("clicked")
+    //     setShow(show => !show);
+    //     console.log(show)
+    // }
 
     return (
         <div>
@@ -28,7 +29,7 @@ const Navbar = () => {
                     <button className="bg-[#CAFF33] px-7 py-3 rounded-3xl !text-black">Sign Up</button>
                 </div>
                 <div className="xl:hidden lg:hidden md:hidden sm:flex" >
-                    <button onClick={openMenu} className="text-[#fff] text-[30px] cursor-pointer" >{!show ? <MenuOutlined />:<IoMdClose/>}</button> 
+                    <button onClick={()=>{setShow(!show)}} className="text-[#fff] z-50 text-[30px] cursor-pointer" > {show? <IoMdClose/>:<IoMdMenu />}</button> 
                 </div>
 
                 <div className={`sm:${show ? 'flex' : 'hidden'} transition   flex-col gap-4 p-4 xl:hidden lg:hidden md:hidden bg-black absolute top-[90px] left-0 w-full`}>
