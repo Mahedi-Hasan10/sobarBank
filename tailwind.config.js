@@ -13,6 +13,12 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    screens: {
+      'sm': { 'min': '0px', 'max': '759px' },   // Small devices (min: 640px, max: 767px)
+      'md': { 'min': '759px', 'max': '1023px' },  // Medium devices (min: 768px, max: 1023px)
+      'lg': { 'min': '1024px', 'max': '1279px' }, // Large devices (min: 1024px, max: 1279px)
+      'xl': { 'min': '1280px',  }, // Extra large devices (min: 1280px, max: 1535px)
+    },
   },
   plugins: [],
 }
